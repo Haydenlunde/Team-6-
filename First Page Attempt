@@ -1,0 +1,18 @@
+from tkinter import *
+from tkinter import ttk
+window = Tk()
+frm = ttk.Frame(window, padding=10)
+frm.grid()
+photoLogo = PhotoImage(file=r'TCULacrosse.gif')
+Label(window, image=photoLogo).grid(row = 0, column = 0, sticky = W)
+photoShirt = PhotoImage(file=r'Shirt.gif')
+photoShirt = img.resize(50,50)
+Label(window, image=photoShirt).grid(row = 2, column = 1, sticky = W)  
+photoLong = PhotoImage(file=r'LongSleeve.gif')
+Label(window, image=photoLong).grid(row = 2, column = 2, sticky = W) 
+photoHoodie = PhotoImage(file=r'Hoodie.gif')
+Label(window, image=photoHoodie).grid(row = 2, column = 3, sticky = W) 
+photoSweats = PhotoImage(file=r'Sweats.gif')
+Label(window, image=photoSweats).grid(row = 2, column = 4, sticky = W) 
+ttk.Button(frm, text="Continue Shopping", command=window.destroy).grid(column=1, row=4)
+window.mainloop()
